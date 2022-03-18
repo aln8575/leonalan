@@ -5,6 +5,7 @@ display: flex;
 min-height: fit-content;
 margin-top: 25vh;
 flex-direction: column;
+height:100vh;
 flex-wrap: wrap;
 align-content: center;
 align-items: center;

@@ -1,14 +1,15 @@
 import styled from 'styled-components'
-import { palette } from '../../styles/GlobalStyles'
+import { media, palette } from '../../styles/GlobalStyles'
 import BurgerSVG from '../../img/BurgerSVG.svg'
 import ThemeSVG from '../../img/ThemeSVG.svg'
 import MenuSVG from '../../img/Menu_Squaves.svg'
 import plab_Logo from '../../img/plab_Logo.svg'
+import vector_vt from '../../assets/Vector_vertical.svg'
 import vector_hr from '../../assets/Vector_horizontal.svg'
 
 export const Nav = styled.nav`
   visibility: hidden;
-  background:url(${MenuSVG}) no-repeat center bottom , #252525;
+  background: #252525;
   background-size: contain;
   user-select: none;
   z-index: 1000;
@@ -23,7 +24,7 @@ export const Nav = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   
-  @media (min-width:600px){
+  @media (min-width:${media.width.mobile}){
     align-content:center;
     visibility:visible;
     background:url();
@@ -36,7 +37,7 @@ export const Nav = styled.nav`
 
 export const Menu = styled.div`
   visibility: hidden;
-  height: 75%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -49,7 +50,7 @@ export const Menu = styled.div`
   justify-items: center;
   
 
-  @media (min-width: 600px) {
+  @media (min-width: ${media.width.mobile}) {
     visibility: visible;
     min-height: 2.75em;
     flex-direction: row;
@@ -67,7 +68,7 @@ export const MenuLink = styled.a`
   padding: 0 10px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
 `
 
 export const Svg = styled.div`
@@ -85,7 +86,7 @@ export const Svg = styled.div`
 
   height: fit-content;
 
-  @media (min-width: 600px) {
+  @media (min-width: ${media.width.mobile}) {
     visibility: hidden;
   }
 `
@@ -98,7 +99,7 @@ export const Burger = styled.a`
   width: 30px;
   height: 30px;
   cursor: pointer;
-  @media (min-width: 600px) {
+  @media (min-width:${media.width.mobile}) {
     visibility: hidden;
   }
 `
@@ -112,7 +113,7 @@ export const Theme = styled.a`
 
   &#Theme {
     visibility: hidden;
-    @media (min-width: 600px) {
+    @media (min-width:${media.width.mobile}) {
       visibility: visible;
       margin: 0 25px;
     }
@@ -131,9 +132,15 @@ cursor:pointer;
 
 export const Dot = styled.a`
 background:url(${vector_hr});
-height:5em;
-width:5px;
+height:5px;
+width:25em;
 background-position: center center;
 background-repeat: no-repeat;
 background-size:contain;
+
+@media(min-width:${media.width.mobile}){
+  background:url(${vector_vt});
+  height:5em;
+  width:5px;
+}
 `

@@ -30,6 +30,15 @@ export const fonts = {
   },
 }
 
+export const media = {
+ width: {
+    mobile: '720px',
+    medium: '870px',
+    normal: '900px',
+    Large: '1000px',
+  }
+}
+
 export const GlobalStyles = createGlobalStyle`
 ::-webkit-scrollbar{
         width: 10px;
@@ -73,7 +82,7 @@ export const Title = styled.h1`
   text-align: center;
   font-weight: ${fonts.weight.Normal};
 
-  @media (min-width: 600px) {
+  @media (min-width: ${media.width.mobile}) {
     font-size: 2.5rem;
   }
 `
@@ -84,7 +93,7 @@ export const Span = styled.p`
   padding-right: 1em;
   font-weight: ${fonts.weight.Light};
 
-  @media (min-width: 600px) {
+  @media (min-width: ${media.width.mobile}) {
     font-size: 1rem;
   }
 `
@@ -95,7 +104,7 @@ export const Text = styled.p`
   text-align: ${props => props.align};
   font-size: ${fonts.size.UltraSmall};
 
-  @media (min-width: 600px) {
+  @media (min-width: ${media.width.mobile}) {
     font-size: ${fonts.size.Normal};
     max-width: 30em;
   }

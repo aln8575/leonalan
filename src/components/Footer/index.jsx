@@ -1,5 +1,6 @@
 import React from 'react'
 import { FooterBody,Logo, Menu, MenuLink, Wrapper } from './style'
+import { Text } from '../../styles/GlobalStyles'
 
 export default function Footer() {
   return(
@@ -23,6 +24,9 @@ export default function Footer() {
          <MenuLink href='#'>Telefones</MenuLink>
          </Wrapper>
        </Menu>
+        <Wrapper justifyContent="flex-end">
+       <Text align="center">Feito com &#x1F496; pmenosLab. ©Copyright 2022 pmenosLab.</Text>
+       </Wrapper>
      </FooterBody>
      )
 }

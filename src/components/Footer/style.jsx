@@ -1,20 +1,26 @@
 import styled from 'styled-components'
 import plab_Logo from '../../img/plab_Logo.svg'
+import { media } from '../../styles/GlobalStyles'
 
 
 
 export const FooterBody=styled.footer`
-position:absolute
+display:flex;
+flex-direction:column;
 width:100%;
-height:12em;
-bottom:0;
+height:100%;
 color:black;
 background-color:#202020;
 border-top: 0.1em solid #E10613;
+align-items:center;
+justify-content;center;
+
+@media (min-width:${media.width.medium}){
+  flex-direction:row;
+  height:12em;
+  }
 `
 export const Logo = styled.a`
-margin-top: 10%;
-position:absolute;
 background: url(${plab_Logo});
 background-position: center center;
 background-repeat: no-repeat;
@@ -27,23 +33,36 @@ height:75px;
 
 export const Menu=styled.div`
 display: flex;
-flex-direction: row;
+flex-direction: column;
 flex-wrap: wrap;
 align-content: space-around;
-align-items: flex-start;
+align-items:center;
 justify-content: space-between;
-width: 700px;
+width: 100%;
 margin: auto;
+
+@media (min-width:${media.width.medium}){
+  flex-direction:row;
+  width:700px;
+  align-items: flex-start;
+  }
 `
 
 export const Wrapper=styled.div`
-    margin: .7em;
+    margin-top:1.2em;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-between;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    justify-content: ${(props) => props.justifyContent || "space-evenly"};;
+    align-items: center;
+
+    @media (min-width:${media.width.medium}){
+       flex-direction: column;
+      margin-top:0;
+      justify-content: ${(props) => props.justifyContent || "space-evenly"};;
+      align-items: center;
+      }
 `
 
 export const MenuLink=styled.a`

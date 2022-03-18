@@ -1,20 +1,22 @@
 import styled from 'styled-components'
+import { media } from '../../styles/GlobalStyles'
 
 export const HomeBody= styled.section`
+height:75vh;
+width:100%;
+display:flex;
 display: flex;
-min-height: fit-content;
-margin-top: 20vh;
 flex-direction: column;
-flex-wrap: wrap;
-align-content: center;
-align-items: center;
+align-content: space-between;
 justify-content: center;
+align-items: flex-start;
 
-> #Projects{
-  margin: 0;
-  font-size: 2rem;
-  @media (min-width:1370px){
-    font-size: 2.5rem;
+@media (min-width:${media.width.mobile}){
+  height:100vh;
   }
-}
+`
+
+export const Wrapper=styled.div`
+display:flex;
+width:100%;
 `
