@@ -1,13 +1,28 @@
 import React from 'react'
-import Perfil from '../../img/Perfil.png'
-import { Title } from '../../styles/GlobalStyles'
-import { FooterBody } from './style'
+import { FooterBody,Logo, Menu, MenuLink, Wrapper } from './style'
 
 export default function Footer() {
   return(
      <FooterBody>
-       <h1>texto</h1>
-       <p>ajdnwakljdnalkjdnawlkjdnawlkjdnawkljdnakljwdnawlkjdnaklwjdnklajwdnkljawdnlakjwdnlkajwndkljawndkljawndlkawdnlkawjdnlwakjdnwalkjdnawlkjdnawldnawlkjdnawldkjnawdlkjnwadlkjawndlkjwandlkjawndlkawndlk</p>
+       <Wrapper>
+      <Logo/>
+      </Wrapper>
+       <Menu>
+         <Wrapper>
+         <MenuLink id='principle'>Inicio</MenuLink>
+         <MenuLink href='#'>Home</MenuLink>
+         </Wrapper>
+           <Wrapper>
+         <MenuLink id='principle'>Sobre Nós</MenuLink>
+         <MenuLink href='#'>informações da Empresa</MenuLink>
+         <MenuLink href='#'>Contato</MenuLink>
+         </Wrapper>
+         <Wrapper>
+         <MenuLink id='principle'>Suporte</MenuLink>
+         <MenuLink href='#'>FAQ</MenuLink>
+         <MenuLink href='#'>Telefones</MenuLink>
+         </Wrapper>
+       </Menu>
      </FooterBody>
      )
 }

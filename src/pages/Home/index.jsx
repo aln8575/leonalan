@@ -6,8 +6,8 @@ import banner from '../../img/banner.jpg'
 export default function Home(){
     return(
         <HomeBody>
-            <h1>Home</h1>
-            <Banner src={banner}></Banner>
+            <h1>alo</h1>
+            <Banner banner={banner}>Aqui já começou o futuro</Banner>
         </HomeBody>
     )
 }

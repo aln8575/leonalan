@@ -6,38 +6,12 @@ export const palette = {
   primary: {
     main: '#151515',
     light: '#F4F4F4',
-    dark: '#252525',
+    dark: '#151515',
   },
   secondary: {
-    main:
-      'linear-gradient(180deg,rgba(255, 0, 184, 0) 0%,#ff00b8 17.19%,#ff007a 80.73%,rgba(255, 0, 122, 0) 100%)',
-    light:
-      'linear-gradient(180deg, rgba(246, 235, 207, 0) 0%, rgba(255, 219, 25, 0) 0.01%, #FFDB19 13.02%, #FFB800 79.17%, rgba(255, 184, 0, 0) 100%)',
-    dark:
-      'linear-gradient(180deg,rgba(255, 0, 184, 0) 0%,#ff00b8 17.19%,#ff007a 80.73%,rgba(255, 0, 122, 0) 100%)',
-  },
-  bubbles: {
-    main: 'radial-gradient(50% 50% at 50% 50%, #cc0092 0%, #ff4dcc 87.5%)',
-    light: 'radial-gradient(50% 50% at 50% 50%, #D7BD2F 0%, #FFE866 100%)',
-    dark: 'radial-gradient(50% 50% at 50% 50%, #cc0092 0%, #ff4dcc 87.5%)',
-  },
-  cards: {
-    background: {
-      red: 'linear-gradient(180deg, #EA3A46 0%, #BF323C 100%)',
-      green: 'linear-gradient(180deg, #55BAA3 0%, #44A891 100%)',
-      blue: 'linear-gradient(180deg, #27ABEE 0%, #228EC5 100%)',
-      purple: 'linear-gradient(180deg, #8765DE 0%, #694CB3 100%)',
-    },
-    border: {
-      red: '#EA3A46',
-      green: '#55BAA3',
-      blue: '#27ABEE',
-      purple: '#8765DE',
-      selectedRed: '#9A1F27',
-      selectedGreen: '#137D66',
-      selectedBlue: '#166C98',
-      selectedPurple: '#5B409C',
-    },
+    main:'#e10613',
+    light:'#009EE1',
+    dark:'#e10613',
   },
 }
 
@@ -86,7 +60,7 @@ body{
     box-sizing: border-box;
     font-family: "Nunito";
     margin: 0;
-    background-color: ${palette.primary.main};
+    background-color: ${palette.primary.dark};
     color: ${palette.primary.light};
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -118,7 +92,7 @@ export const Span = styled.p`
 export const Text = styled.p`
   font-weight: ${fonts.weight.Light};
   padding: 0 0.3em;
-  text-align: center;
+  text-align: ${props => props.align};
   font-size: ${fonts.size.UltraSmall};
 
   @media (min-width: 600px) {

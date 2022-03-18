@@ -6,7 +6,7 @@ export default function Banner(props){
     return(
         <BannerBody>
             <BannerPhoto src={BannerImg}/>
-            <Text>{props.children}</Text>
+            <Text align="center">{props.children}</Text>
         </BannerBody>
     )
 }

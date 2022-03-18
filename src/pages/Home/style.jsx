@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const HomeBody= styled.section`
 display: flex;
 min-height: fit-content;
-margin-top: 25vh;
+margin-top: 20vh;
 flex-direction: column;
 flex-wrap: wrap;
 align-content: center;

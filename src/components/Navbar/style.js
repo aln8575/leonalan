@@ -4,6 +4,7 @@ import BurgerSVG from '../../img/BurgerSVG.svg'
 import ThemeSVG from '../../img/ThemeSVG.svg'
 import MenuSVG from '../../img/Menu_Squaves.svg'
 import plab_Logo from '../../img/plab_Logo.svg'
+import vector_hr from '../../assets/Vector_horizontal.svg'
 
 export const Nav = styled.nav`
   visibility: hidden;
@@ -23,11 +24,16 @@ export const Nav = styled.nav`
   justify-content: space-between;
   
   @media (min-width:600px){
-    background: transparent;
-    top:0.5em;
+    align-content:center;
+    visibility:visible;
+    background:url();
+    background-color:${palette.primary.dark};
+    top:0;
+    width:100%;
     height: 90px;
   }
 `
+
 export const Menu = styled.div`
   visibility: hidden;
   height: 75%;
@@ -41,6 +47,7 @@ export const Menu = styled.div`
   align-items: center;
   justify-content: space-evenly;
   justify-items: center;
+  
 
   @media (min-width: 600px) {
     visibility: visible;
@@ -52,6 +59,7 @@ export const Menu = styled.div`
     align-items: center;
     justify-content: center;
     justify-items: center;
+    border-top: 5px  ${palette.secondary.light};
   }
 `
 export const MenuLink = styled.a`
@@ -111,11 +119,21 @@ export const Theme = styled.a`
   }
 `
 
-export const Logo = styled.svg`
+export const Logo = styled.a`
 background: url(${plab_Logo});
 background-position: center center;
 background-repeat: no-repeat;
 background-size:contain;
 width:300px;
 height:75px;
+cursor:pointer;
+`
+
+export const Dot = styled.a`
+background:url(${vector_hr});
+height:5em;
+width:5px;
+background-position: center center;
+background-repeat: no-repeat;
+background-size:contain;
 `
